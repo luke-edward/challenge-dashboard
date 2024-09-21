@@ -49,5 +49,6 @@ export async function GET() {
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   const users = Array.from({ length: 20 }, generateRandomUser);
+  console.log("API: Generated", users.length, "users");
   return NextResponse.json(users);
 }

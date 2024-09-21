@@ -29,6 +29,7 @@ export default function Dashboard() {
     try {
       const response = await fetch("/api/users");
       const data = await response.json();
+      console.log("Frontend: Received", data.length, "users from API");
       setUsers(data);
       setLoading(false);
     } catch (error) {
